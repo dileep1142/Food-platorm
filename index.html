@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Food Rescue Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+          <img src="assets/Gemini_Generated_Image_2o65c92o65c92o65 (1).png" alt="FoodRescue Logo">
+            <h1>FoodRescue</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" class="active">Dashboard</a></li>
+                <li><a href="#">My Donations</a></li>
+                <li><a href="#">NGO Partners</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="dashboard-container">
+        
+        <section class="donation-form-section">
+            <h2>Add Surplus Food</h2>
+            <form id="donation-form">
+                <div class="form-group">
+                    <label for="food-type">Food Type:</label>
+                    <select id="food-type" required>
+                        <option value="veg">Vegetarian</option>
+                        <option value="non-veg">Non-Vegetarian</option>
+                        <option value="baked">Baked Goods</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Pickup Address:</label>
+                    <div class="address-grid">
+                        <input type="text" id="house-num" placeholder="House/Flat No." required>
+                        <input type="text" id="street" placeholder="Street Name" required>
+                        <input type="text" id="road-num" placeholder="Road Number">
+                        <input type="text" id="city" placeholder="City" required>
+                        <input type="text" id="state" placeholder="State" required>
+                        <input type="text" id="country" placeholder="Country" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="quantity">Quantity (Servings):</label>
+                    <input type="number" id="quantity" min="1" required>
+                </div>
+                <button type="submit" id="submit-btn">Post Donation</button>
+            </form>
+        </section>
+
+        <section class="active-donations-section">
+            <h2>Live Donations Near You</h2>
+            <div id="donation-feed" class="grid-layout">
+                </div>
+        </section>
+
+    </main>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
